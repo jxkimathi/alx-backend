@@ -1,4 +1,4 @@
-#!/usr/bin/env python32-hypermedia_pagination.py
+#!/usr/bin/env python3
 """Creates a simple helper function"""
 
 

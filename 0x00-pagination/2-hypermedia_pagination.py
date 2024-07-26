@@ -13,6 +13,7 @@ def index_range(page, page_size) -> tuple:
     end = start + page_size
     return (start, end)
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -42,8 +43,9 @@ class Server:
         start, end = index_range(page, page_size)
         return self.dataset()[start:end]
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str,
-                                                                    Union[int, List[List], None]]:
+    def get_hyper(self, page: int = 1,
+                  page_size: int = 10) -> Dict[str, Union
+                                               [int, List[List], None]]:
         """Returns a dictionary with hypermedia pagination information"""
         dataset_page = self.get_page(page, page_size)
         total_pages = math.ceil(len(self.dataset()) / page_size)
